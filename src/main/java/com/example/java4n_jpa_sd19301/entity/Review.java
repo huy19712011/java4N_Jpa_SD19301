@@ -13,7 +13,7 @@ public class Review {
     private String rating;
     private String description;
 
-    @ManyToOne
+    @ManyToOne()
     //@JoinColumn(name = "custom_name", referencedColumnName = "id")
     private Course course;
 

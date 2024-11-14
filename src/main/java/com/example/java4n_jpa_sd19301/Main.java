@@ -18,20 +18,20 @@ public class Main {
         Product product1 = new Product(1001, "Product A");
         Product product2 = new Product(1002, "Product B");
 
-        em.getTransaction().begin();
+        //em.getTransaction().begin();
+        //
+        //em.persist(product1);
+        //em.persist(product2);
+        //
+        //product2.setName("BB");
+        //
+        //em.getTransaction().commit();
 
-        em.persist(product1);
-        em.persist(product2);
-
-        product2.setName("BB");
-
-        em.getTransaction().commit();
 
 
-
-        em.createQuery("select p from Product p", Product.class)
-                .getResultList()
-                .forEach(System.out::println);
+        //em.createQuery("select p from Product p", Product.class)
+        //        .getResultList()
+        //        .forEach(System.out::println);
 
         Review review = new Review();
         review.setRating("5");

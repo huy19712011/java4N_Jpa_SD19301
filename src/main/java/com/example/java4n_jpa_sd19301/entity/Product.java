@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "productsSD19301")
+//@Table(name = "productsSD19301")
 public class Product {
 
     @Id
