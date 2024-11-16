@@ -2,6 +2,7 @@ package com.example.java4n_jpa_sd19301.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -11,6 +12,9 @@ public class Product {
     @Id
     private long id;
     private String name;
+
+    @ManyToOne
+    private Category category;
 
     public Product() {
     }
@@ -34,6 +38,14 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     @Override
