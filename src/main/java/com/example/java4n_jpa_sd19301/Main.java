@@ -4,6 +4,8 @@ import com.example.java4n_jpa_sd19301.entity.Course;
 import com.example.java4n_jpa_sd19301.entity.Product;
 import com.example.java4n_jpa_sd19301.entity.Review;
 import com.example.java4n_jpa_sd19301.entity.Student;
+import com.example.java4n_jpa_sd19301.repository.ProductRepository;
+import com.example.java4n_jpa_sd19301.service.ProductService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -69,6 +71,22 @@ public class Main {
 
         em.getTransaction().commit();
 
+        //JPQL
+        ProductService service = new ProductService();
+        service.getProductsByNameOrId_2("product 1", 104)
+                .forEach(System.out::println);
+
+        service.getProductsByNameOrId_3("product 1", 104)
+                .forEach(System.out::println);
+
+        service.getProductsByNameOrId_4("product 1", 104)
+                .forEach(System.out::println);
+
+        service.getProductsByNameOrId_5("product 1", 104)
+                .forEach(System.out::println);
+
+        service.findProductsByNameContaining("pro")
+                .forEach(System.out::println);
 
 
     }
